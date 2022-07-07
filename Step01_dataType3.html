@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType3.html</title>
+</head>
+<body>
+    <h1>javascript 데이터 type</h1>
+    <script>
+        /*
+        
+        */
+        let num=1; // number type
+        let name="lee"; // string type
+        let isMan=false; // boolean type
+
+        // mem1 != mem2
+        /*
+        number string boolean type 이 들어있는 변수 안에는 실제로 그 값이 들어 있다.
+        let a = 10; let b = "kim";  let c = true;
+        object type은 아니다
+        let d = {num:1};
+        object, array, function type은 heap 영역에 만들어진다.(사물함 영역)
+        사물함은 사물함 번호로 관리가 된다 사물함 번호를 프로그래밍 (변수에 위치만 할당)
+        */
+        /*
+        a = mem1
+        a.num = 99
+        mem1 = {num=99, name:"lee", isMan:false}; // 키값을 할당한거라 원본변함
+
+        */
+        let mem1={num:1, name:"lee", isMan:false}; //object type
+        let mem2={num:1, name:"lee", isMan:false};
+        //object의 특정방에 넣을 데이터를 변수명으로 불러와서 넣을 수도 있다.
+        let mem3={num:num, name:name, isMan:isMan};
+        let mem4={num, name, isMan};
+
+        let a=mem1;
+        let b=mem1.num;
+        let c=mem1.name;
+        let d=mem1.isMan;
+
+        mem2.num=2;
+        mem2.name="해골";
+        mem2.isMan=true;
+
+        //빈 object를 만들고 나중에 필요에 따라 방을 추가 할 수 있다.
+        let mem5={};
+        mem5.num=3;
+        mem5.name="원숭이";
+        mem5.isMan=true; 
+
+    </script>
+</body>
+</html>

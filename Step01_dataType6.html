@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType6.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <!-- button onclick="f1();"   button onclick="f1()" 둘다 가능
+    button onclick="f1(); f2();" 여러개일때 ; 필요  -->
+    <button onclick="f1();">눌러보셈</button>
+    <script>
+        //function type data
+
+        let f1 = function(){
+            console.log("하나");
+            console.log("둘");
+            console.log("셋");
+
+            //return "undefined 없애기"
+
+        };
+
+        // f1 안에 들어있는 값을 참조 , 참조f1와 호출f1() 비교
+        let f2=f1;
+
+        let result=f1(); //f1은 콘솔출력되는데 result는 안되는 이유
+        //// 의미 plus를 호출하고 return값을 b에 반환
+
+        let a = alert;
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType8.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <script>
+        //함수를 호출하는 목적 동작을 하기위해 값을 받아오기 위해
+
+        console.log("javascript가 로딩 중 입니다.");
+
+        let pushMonkey=function(){
+            console.log("rarara");
+            console.log("rarara");
+            console.log("rarara");
+        };
+
+        let getFortune=function(){
+
+            let fortune="운세";
+            return fortune; //return이라는 예약어를 이용해서 string type 데이터 함수를 호출한 그 위치로 되돌려 준다.
+
+        };
+
+        pushMonkey(); //undefined
+
+        let fortuneToday=getFortune(); //오늘의 운세를 받아와서 fortuneToday라는 변수에 담기
+        
+
+    </script>
+</body>
+</html>

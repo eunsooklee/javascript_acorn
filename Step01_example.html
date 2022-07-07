@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_example.html</title>
+</head>
+<body>
+    <button onclick = "f()">바꾸기</button>
+    <p>p1 입니다</p>
+    <p id="one">p2 입니다</p>
+    <p id="two">p3 입니다</p>
+    <p>p4 입니다</p>
+    <p>p5 입니다</p> // p{p$ 입니다}*5 + tab
+    <script>
+        document.querySelectorAll("p")[0].innerText="lee";
+    
+        //바꾸기 버튼을 누르면 id가 one 인 요소의 innerText를 "나비"로 바꾸기
+        //document.querySelectorAll("p")[1].innerText="나비";
+        /*
+        document.querySelector("#one") != document.querySelector("p") 
+        document.querySelector("p")는 p1만 출력한다 (?)
+        */
+        
+        let f = function(){document.querySelector("#one").innerText="나비"};
+    </script>
+</body>
+</html>
