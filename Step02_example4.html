@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example4.html</title>
+</head>
+<body>
+
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+
+    document.querySelector("#changeBtn2").addEventListener("click", function(){
+
+        let divs = document.querySelectorAll("div");
+
+        if(i == 10){ <!--10대신 divs.length 가능-->
+            return; 
+            <!-- 함수는 수행하다가 return이라는 예약어를 만나면 종료된다. -->
+        }
+
+       divs[i].innerText="lee";
+       i = i+1;
+    
+    });
+    
+</body>
+</html>

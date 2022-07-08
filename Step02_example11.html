@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example11.html</title>
+</head>
+<body>
+    <h3>가위 바위 보 게임</h3>
+    <select id="mySelect">
+        <option value="">나 : 선택</option>
+        <option value="0">나 : 가위</option>
+        <option value="1">나 : 바위</option>
+        <option value="2">나 : 보</option>
+    </select>
+    <strong>vs</strong>
+    <select id="comSelect">
+        <option value="">com : 선택</option>
+        <option value="0">com : 가위</option>
+        <option value="1">com : 바위</option>
+        <option value="2">com : 보</option>
+    </select>
+    <p id="result"></p>
+    <script>
+        /*
+        Step02_example9.html 을 참고해서 가위, 바위, 보 게임을 완성시켜보세요
+        승리시 p 요소에 "이겼다"
+        패배시 p 요소에 "졌다"
+        비길시 p 요소에 "비겼다" 라고 출력
+        - hint
+        document.querySelector("#comSelect").value=0;
+        document.querySelector("#comSelect").value=1;
+        document.querySelector("#comSelect").value=2;
+        */
+        let result = document.querySelector("#result").innerText;
+        let me = document.querySelector("#mySelect");
+        let com = document.querySelector("#comSelect");
+
+        document.querySelector("#mySelect").addEventListener("change",function(){
+            let value=document.querySelector("#mySelect").value;
+            com.value=Math.floor(Math.random()*3);
+            console.log(value);
+            console.log(com.value);
+
+            if(value == com.value){
+                document.querySelector("#result").innerText = "비겼다"
+            }else if((value-com.value)==-1||(value+com.value)==2){
+                document.querySelector("#result").innerText = "졌다"
+            }else{
+                document.querySelector("#result").innerText = "이겼다"
+             };
+
+        });
+
+        /*
+        document.querySelector("#comSelect").addEventListener("change",function(){
+            let value=document.querySelector("#comSelect").value;
+        });
+        */
+
+    </script>
+    
+</body>
+</html>

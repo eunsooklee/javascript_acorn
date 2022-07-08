@@ -9,6 +9,7 @@
         #kimImg{
 
             transition: margin-left 1s linear; /*linear = 일정하게 선형으로 ease-out 부드럽게 ease-in*/
+            transition: margin-top 1s linear;
 
         };
     </style>
@@ -48,7 +49,7 @@
 
         });
 
-        document.querySelector("moveRightBottomBtn").addEventListener("click", function(){
+        document.querySelector("#moveRightBottomBtn").addEventListener("click", function(){
 
             mLeft = mLeft + 100;
             mTop = mTop+100;
