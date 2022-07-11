@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>반복문 테스트1</h1>
+    <button onclick="clicked">click</button>
+    <button id="myBtn">click2</button>
+    <script> //실행의 흐름 = Thread
+
+        document.querySelector("myBtn").addEventListener("click", function(){
+            console.log("callback 함수가 호출됨");
+        });
+
+        function clicked(){
+            console.log(호출);
+        }
+
+
+        // let i=0은 for문 안에서만 사용할 수 있는 local variable 만들고 초기값 0 대입 
+        // for 문이 종료 되면 i는 사라진다. for 문에 실행순서가 왔을때 최초 한번만 실행된다.
+        // 2. i<5 이 조건이 false가 될때까지 for무늬 {} 블럭이 반복 수행 i++은 증감 연산자
+        for(let i=0; i<5; i++){
+            console.log(i);
+        }
+
+        console.log("javascript가 로딩 되었습니다.");
+    </script>
+</body>
+</html>
